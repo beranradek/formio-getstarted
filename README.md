@@ -1,6 +1,6 @@
 # Formio: Get Started
 
-#### Get Started example of building simple Java form using [Formio library](http://formio.net "Formio library").
+#### Get Started example of building simple Java form using [Formio library](http://www.formio.net "Formio library").
 
 ## Maven Build
 
