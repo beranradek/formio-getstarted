@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import net.formio.FormData;
 import net.formio.FormMapping;
 import net.formio.Forms;
-import net.formio.ParamsProvider;
-import net.formio.servlet.HttpServletRequestParams;
+import net.formio.RequestParams;
+import net.formio.servlet.ServletRequestParams;
 import net.formio.validation.ValidationResult;
 
 import com.examples.domain.Person;
@@ -43,7 +43,7 @@ public class PersonController extends HttpServlet {
 		FormData<Person> formData = null;
 		if (request.getParameter("submit") != null) {
 			// Form was submitted
-			ParamsProvider params = new HttpServletRequestParams(request);
+			RequestParams params = new ServletRequestParams(request);
 			formData = personForm.bind(params);
 			if (formData.isValid()) {
 				// End of processing: Store edited person and redirect:
